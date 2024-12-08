@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birdcord</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.freepik.com/256/3120/3120907.png?semt=ais_hybrid">
+</head>
+<body>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdcord</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+    background-image: url('https://png.pngtree.com/background/20230503/original/pngtree-cute-bird-standing-on-the-grass-picture-image_2500167.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+<style>body {
+    font-family: Arial, sans-serif;
+    background: url('https://png.pngtree.com/background/20230503/original/pngtree-cute-bird-standing-on-the-grass-picture-image_2500167.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+</style>
+<img src="https://cdn-icons-png.freepik.com/256/3120/3120907.png?semt=ais_hybrid" alt="Image description" />
+<br>
+<h1>Birdcord Online Chat For Birds</h1>
+<br>
+<p>new update adds: online content private messaging system.</p>
+<p>Rules: no swearing no gyatts no asking for money get a job!</p>
+<h1>Sunny123 Has A Warning</h1>
+<br>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdcord</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        #meterContainer {
+            width: 100%;
+            max-width: 600px;
+            height: 50px;
+            border: 2px solid #333;
+            position: relative;
+        }
+        #meter {
+            width: 0;
+            height: 100%;
+            background-color: #4CAF50;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="meterContainer">
+        <div id="meter"></div>
+    </div>
+
+    <script>
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const analyser = audioContext.createAnalyser();
+                const microphone = audioContext.createMediaStreamSource(stream);
+                const javascriptNode = audioContext.createScriptProcessor(2048, 1, 1);
+
+                analyser.smoothingTimeConstant = 0.3;
+                analyser.fftSize = 1024;
+
+                microphone.connect(analyser);
+                analyser.connect(javascriptNode);
+                javascriptNode.connect(audioContext.destination);
+
+                javascriptNode.onaudioprocess = () => {
+                    const array = new Uint8Array(analyser.frequencyBinCount);
+                    analyser.getByteFrequencyData(array);
+
+                    let values = 0;
+                    for (let i = 0; i < array.length; i++) {
+                        values += array[i];
+                    }
+
+                    const average = values / array.length;
+
+                    const meter = document.getElementById('meter');
+                    meter.style.width = average * 3 + 'px'; // Scale the width based on the average volume
+                };
+            })
+            .catch(error => console.error(error));
+    </script>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdcord Chat and Voice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        #chatContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #chat {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 80%;
+            max-width: 600px;
+            height: 400px;
+            overflow-y: auto;
+            background-color: white;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        #messageInput {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        #sendButton {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        #sendButton:hover {
+            background-color: #45a049;
+        }
+        .message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .username {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        #voiceChatButton {
+            padding: 15px 25px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px;
+        }
+        #voiceChatButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Birdcord Chat and Voice</h1>
+    <div id="chatContainer">
+        <div id="chat"></div>
+        <input type="text" id="messageInput" placeholder="Type a chirp..." />
+        <button id="sendButton">Send Chirp</button>
+    </div>
+    <button id="voiceChatButton">Start Voice Chat</button>
+
+    <script>
+        const usernames = ['Sparrowthesuper23', 'BlueJayblue111', 'Cardinal321', 'Robin31', 'Canary231', 'Finchthecuty34', 'Parrot', 'Peacock33', 'Falcon232', 'Eaglethehunter122'];
+        const randomUsername = usernames[Math.floor(Math.random() * usernames.length)];
+        const chat = document.getElementById('chat');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+
+        // Create WebSocket connection
+        const socket = new WebSocket('ws://localhost:8080');
+
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value;
+            if (message) {
+                const avatar = 'https://cdn-icons-png.flaticon.com/512/2219/2219694.png'; // Replace with your bird avatar URL
+                const chatMessage = { username: randomUsername, avatar, text: message };
+                socket.send(JSON.stringify(chatMessage));
+                addMessage(chatMessage.username, chatMessage.avatar, chatMessage.text);
+                messageInput.value = '';
+            }
+        });
+
+        messageInput.addEventListener('keypress', event => {
+            if (event.key === 'Enter') {
+                sendButton.click();
+            }
+        });
+
+        function addMessage(username, avatar, message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            const avatarImg = document.createElement('img');
+            avatarImg.src = avatar;
+            avatarImg.classList.add('avatar');
+            const usernameSpan = document.createElement('span');
+            usernameSpan.classList.add('username');
+            usernameSpan.textContent = username;
+            const messageText = document.createElement('div');
+            messageText.textContent = message;
+            messageDiv.appendChild(avatarImg);
+            messageDiv.appendChild(usernameSpan);
+            messageDiv.appendChild(messageText);
+            chat.appendChild(messageDiv);
+            chat.scrollTop = chat.scrollHeight; // Scroll to the bottom
+        }
+
+        socket.addEventListener('message', event => {
+            const chatMessage = JSON.parse(event.data);
+            addMessage(chatMessage.username, chatMessage.avatar, chatMessage.text);
+        });
+
+        const voiceChatButton = document.getElementById('voiceChatButton');
+        let localStream;
+        let peerConnection;
+
+        const servers = {
+            iceServers: [
+                {
+                    urls: "stun:stun.l.google.com:19302"
+                }
+            ]
+        };
+
+        voiceChatButton.addEventListener('click', async () => {
+            // Start voice chat by activating the microphone
+            await startVoiceChat();
+        });
+
+        async function startVoiceChat() {
+            // Get local audio stream
+            localStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+            // Create peer connection
+            peerConnection = new RTCPeerConnection(servers);
+
+            // Add local stream to peer connection
+            localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+            // Handle incoming stream
+            peerConnection.ontrack = event => {
+                const remoteStream = event.streams[0];
+                const audioElement = new Audio();
+                audioElement.srcObject = remoteStream;
+                audioElement.play();
+            };
+
+            // Create and send offer
+            const offer = await peerConnection.createOffer();
+            await peerConnection.setLocalDescription(offer);
+
+            // Placeholder to send offer to signaling server
+            sendMessage({ offer });
+        }
+
+        function sendMessage(message) {
+            // Placeholder: Implement signaling server communication here
+            console.log('Sending message:', message);
+        }
+
+        // Placeholder for receiving messages from signaling server
+        function receiveMessage(message) {
+            if (message.offer) {
+                handleOfferMessage(message.offer);
+            } else if (message.answer) {
+                handleAnswerMessage(message.answer);
+            } else if (message.iceCandidate) {
+                handleIceCandidateMessage(message.iceCandidate);
+            }
+        }
+
+        async function handleOfferMessage(offer) {
+            await peerConnection.setRemoteDescription(new RTCSessionDescription(offer));
+            const answer = await peerConnection.createAnswer();
+            await peerConnection.setLocalDescription(answer);
+            sendMessage({ answer });
+        }
+
+        async function handleAnswerMessage(answer) {
+            await peerConnection.setRemoteDescription(new RTCSessionDescription(answer));
+        }
+
+        function handleIceCandidateMessage(candidate) {
+            const iceCandidate = new RTCIceCandidate(candidate);
+            peerConnection.addIceCandidate(iceCandidate);
+        }
+    </script>
+</body>
+</html>
+
+
+
+<h1>{BIRDTOK}:</h1><br> <img src="https://i.imgflip.com/69xm6o.gif" alt="Image description" /> 
+1 yr ago
+<br>
+<img src="https://media.tenor.com/VDgMW2S9i1gAAAAM/feliz-navidad-tiktok-meme.gif" alt="Image description" /> 
+1 yr ago
+<br>
+<img src="https://i.imgflip.com/62l647.gif" alt="Image description" /> 
+1 yr ago
+<br>
+<img src="https://media.tenor.com/FJKTE7AjlqoAAAAM/grin-swaeting.gif" alt="Image description" /> 
+1 yr ago
+<br>
+<img src="https://i.imgflip.com/4ywnil.jpg" alt="Image description" /> 
+1 yr ago
+<br>
+<img src="https://media.tenor.com/YNvTXqUU1isAAAAM/mewing-cat-mewing.gif" alt="image description" />
+1 sec ago
+<br>
+<h1>friends:</h1>
+<br>
+<button><a href="">Sunny123</a></button>
+<br>
+<button><a href="">ParrotXD</a></button>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursor</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* Increase height to allow scrolling */
+            background-color: #f0f0f0;
+            cursor: none; /* Hide the default cursor */
+        }
+        #customCursor {
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            background: url('https://preview.redd.it/du4w5cs9zgm91.png?width=559&format=png&auto=webp&s=bd30e89748066c2fd501364602414f323364b945') no-repeat center center; /* Replace with your cursor image URL */
+            background-size: contain;
+            pointer-events: none; /* Makes sure cursor doesn't block clicks */
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+    </style>
+</head>
+<body>
+    <div id="customCursor"></div>
+
+    <script>
+        const customCursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdcord</title>
+    <style>
+        body, * {
+            cursor: none; /* Hide the default cursor */
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdcor</title>
+</head>
+<body>
+    <script>
+        // Function to hide the cursor
+        function hideCursor() {
+            document.body.style.cursor = 'none';
+        }
+
+        // Hide the cursor on page load
+        window.onload = hideCursor;
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdcord</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        #playButton {
+            padding: 15px 25px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        #playButton:hover {
+            background-color: #45a049;
+        }
+        #musicFrame {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton">Play Cozy Music</button>
+    <iframe id="musicFrame" src="https://www.youtube.com/embed/5qap5aO4i9A?enablejsapi=1&origin=http://example.com" allow="autoplay"></iframe>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const musicFrame = document.getElementById('musicFrame');
+
+        playButton.addEventListener('click', () => {
+            musicFrame.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        });
+    </script>
+</body>
+</html>
+
+
